@@ -1,0 +1,6 @@
+{
+  "name": "مطعم وكافيه العالمية | Al Alamia",
+  "description": "الموقع الرسمي لمطعم وكافيه العالمية - أشهى المأكولات والمشويات والسندوتشات المصرية في السويس مع خدمة الطلب والتوصيل.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
