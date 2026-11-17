@@ -12,7 +12,7 @@ export const Hero: React.FC<HeroProps> = ({ onBrowseMenu }) => {
   return (
     <section
       id="hero"
-      className="relative flex items-center justify-center overflow-hidden pt-20 pb-8 sm:pt-24 sm:pb-14 lg:pt-20 lg:pb-16 lg:min-h-[100dvh]"
+      className="relative flex items-center justify-center overflow-hidden min-h-[100dvh] pt-20 pb-20 sm:pt-24 sm:pb-16 lg:pt-20 lg:pb-16"
     >
       {/* HERO BACKGROUND */}
       <div className="absolute inset-0 z-0 overflow-hidden">

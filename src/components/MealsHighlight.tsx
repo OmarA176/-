@@ -12,7 +12,7 @@ export const MealsHighlight: React.FC<MealsHighlightProps> = ({ onAddToCart }) =
   const meals = MENU_ITEMS.filter((item) => item.category === 'meals');
 
   return (
-    <section id="meals-highlight" className="py-14 lg:py-16 bg-[#111520] border-t border-b border-[#caa85d]/20 relative overflow-hidden">
+    <section id="meals-highlight" className="py-14 lg:py-16 bg-[#131826] border-t border-b border-[#caa85d]/20 relative overflow-hidden">
       {/* Subtle Ambient Glows for Frosted Glass Depth */}
       <div className="absolute -top-24 right-1/4 w-96 h-96 bg-[#caa85d]/15 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute -bottom-24 left-1/4 w-96 h-96 bg-amber-500/12 rounded-full blur-[120px] pointer-events-none" />
@@ -49,7 +49,7 @@ export const MealsHighlight: React.FC<MealsHighlightProps> = ({ onAddToCart }) =
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
               whileHover={{ y: -5 }}
-              className="bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl rounded-2xl border border-white/15 hover:border-[#caa85d]/50 p-5 flex flex-col justify-between transition-colors group shadow-[0_12px_36px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.12)] transform-gpu"
+              className="bg-[#0b101b]/65 hover:bg-[#111726]/75 backdrop-blur-xl rounded-2xl border border-white/15 hover:border-[#caa85d]/50 p-5 flex flex-col justify-between transition-colors group shadow-[0_12px_36px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)] transform-gpu"
             >
               <div>
                 <div className="flex items-center justify-between mb-2.5">
@@ -69,7 +69,7 @@ export const MealsHighlight: React.FC<MealsHighlightProps> = ({ onAddToCart }) =
                   {meal.description}
                 </p>
 
-                <div className="space-y-1.5 mb-5 text-xs text-gray-200 bg-white/[0.04] backdrop-blur-md p-3 rounded-xl border border-white/10">
+                <div className="space-y-1.5 mb-5 text-xs text-gray-200 bg-[#080c14]/55 backdrop-blur-md p-3 rounded-xl border border-white/10">
                   <div className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                     <span>أرز بسمتي فاخر ومتبل</span>

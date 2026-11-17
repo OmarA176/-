@@ -37,7 +37,7 @@ export const AboutAndFeatures: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-14 lg:py-16 bg-[#10141e] relative overflow-hidden">
+    <section id="about" className="py-14 lg:py-16 bg-[#121724] relative overflow-hidden">
       {/* Subtle Ambient Glows for Frosted Glass Depth */}
       <div className="absolute top-20 right-1/4 w-96 h-96 bg-[#caa85d]/14 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-10 left-1/4 w-96 h-96 bg-amber-500/12 rounded-full blur-[120px] pointer-events-none" />
@@ -66,7 +66,7 @@ export const AboutAndFeatures: React.FC = () => {
               من حبة الفول المنتقاة بعناية، وقرص الطعمية المقرمش بالسمسم، وحتى أسياخ الكفتة والشيش طاووق المشوية على الفحم الحي؛ نحرص على تقديم تجربة طعام استثنائية تسعد كل عميل يزورنا أو يطلب من عندنا.
             </p>
 
-            <div className="flex items-center justify-around sm:justify-start sm:gap-8 p-4 rounded-2xl bg-white/[0.05] backdrop-blur-xl border border-white/15 shadow-[0_12px_32px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.12)]">
+            <div className="flex items-center justify-around sm:justify-start sm:gap-8 p-4 rounded-2xl bg-[#0b101b]/65 backdrop-blur-xl border border-white/15 shadow-[0_12px_32px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)]">
               <div className="text-center">
                 <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block tabular-nums">24/7</span>
                 <span className="text-xs text-gray-300">خدمة مستمرة</span>
@@ -126,7 +126,7 @@ export const AboutAndFeatures: React.FC = () => {
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 whileHover={{ y: -4 }}
-                className="bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl rounded-2xl border border-white/15 hover:border-amber-400/45 p-5 transition-colors shadow-[0_12px_32px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.12)] transform-gpu"
+                className="bg-[#0b101b]/65 hover:bg-[#111726]/75 backdrop-blur-xl rounded-2xl border border-white/15 hover:border-amber-400/45 p-5 transition-colors shadow-[0_12px_32px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)] transform-gpu"
               >
                 <div className="w-10 h-10 rounded-xl bg-amber-400/15 border border-amber-400/30 text-amber-300 flex items-center justify-center mb-3.5">
                   <Icon className="w-5 h-5" />

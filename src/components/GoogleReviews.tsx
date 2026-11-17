@@ -17,7 +17,7 @@ export const GoogleReviews: React.FC = () => {
   });
 
   return (
-    <section id="reviews" className="py-14 lg:py-16 bg-[#111520] border-t border-[#caa85d]/20 relative overflow-hidden">
+    <section id="reviews" className="py-14 lg:py-16 bg-[#131826] border-t border-[#caa85d]/20 relative overflow-hidden">
       {/* Subtle Ambient Gold Glows for Frosted Glass Depth */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#caa85d]/14 rounded-full blur-[120px] pointer-events-none transform-gpu" />
       <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-amber-600/12 rounded-full blur-[110px] pointer-events-none transform-gpu" />
@@ -50,10 +50,10 @@ export const GoogleReviews: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className="bg-white/[0.05] backdrop-blur-xl border border-white/15 rounded-2xl p-5 sm:p-7 mb-9 shadow-[0_12px_36px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.12)] flex flex-col md:flex-row items-center justify-between gap-6 transform-gpu"
+          className="bg-[#0b101b]/65 backdrop-blur-xl border border-white/15 rounded-2xl p-5 sm:p-7 mb-9 shadow-[0_12px_36px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)] flex flex-col md:flex-row items-center justify-between gap-6 transform-gpu"
         >
           <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-right">
-            <div className="flex flex-col items-center justify-center bg-white/[0.04] backdrop-blur-md border border-white/15 rounded-2xl p-3.5 w-28 h-28 shrink-0 shadow-inner">
+            <div className="flex flex-col items-center justify-center bg-[#080c14]/55 backdrop-blur-md border border-white/12 rounded-2xl p-3.5 w-28 h-28 shrink-0 shadow-inner">
               <span className="text-3xl sm:text-4xl font-black text-white font-mono leading-none tabular-nums">
                 {GOOGLE_REVIEWS_STATS.averageRating}
               </span>
@@ -126,7 +126,7 @@ export const GoogleReviews: React.FC = () => {
             className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-colors cursor-pointer ${
               activeFilter === 'all'
                 ? 'bg-[#caa85d] text-[#12151d] font-black shadow-md'
-                : 'bg-white/[0.05] backdrop-blur-md text-gray-200 hover:text-white hover:bg-white/[0.1] border border-white/15'
+                : 'bg-[#0b101b]/65 backdrop-blur-md text-gray-200 hover:text-white hover:bg-[#111726]/80 border border-white/15'
             }`}
           >
             جميع التقييمات المختارة ({GOOGLE_REVIEWS.length})
@@ -136,7 +136,7 @@ export const GoogleReviews: React.FC = () => {
             className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-colors cursor-pointer ${
               activeFilter === 'delivery'
                 ? 'bg-[#caa85d] text-[#12151d] font-black shadow-md'
-                : 'bg-white/[0.05] backdrop-blur-md text-gray-200 hover:text-white hover:bg-white/[0.1] border border-white/15'
+                : 'bg-[#0b101b]/65 backdrop-blur-md text-gray-200 hover:text-white hover:bg-[#111726]/80 border border-white/15'
             }`}
           >
             سرعة التوصيل والدليفري
@@ -146,7 +146,7 @@ export const GoogleReviews: React.FC = () => {
             className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-colors cursor-pointer ${
               activeFilter === 'food'
                 ? 'bg-[#caa85d] text-[#12151d] font-black shadow-md'
-                : 'bg-white/[0.05] backdrop-blur-md text-gray-200 hover:text-white hover:bg-white/[0.1] border border-white/15'
+                : 'bg-[#0b101b]/65 backdrop-blur-md text-gray-200 hover:text-white hover:bg-[#111726]/80 border border-white/15'
             }`}
           >
             جودة الأكل والمشويات والرولات
@@ -163,7 +163,7 @@ export const GoogleReviews: React.FC = () => {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.4, delay: idx * 0.06 }}
               whileHover={{ y: -4 }}
-              className="bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl rounded-2xl border border-white/15 hover:border-[#caa85d]/45 p-5 flex flex-col justify-between shadow-[0_12px_32px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.12)] transition-colors group relative transform-gpu"
+              className="bg-[#0b101b]/65 hover:bg-[#111726]/75 backdrop-blur-xl rounded-2xl border border-white/15 hover:border-[#caa85d]/45 p-5 flex flex-col justify-between shadow-[0_12px_32px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors group relative transform-gpu"
             >
               <Quote className="absolute top-4 left-4 w-7 h-7 text-gray-700/30 group-hover:text-[#caa85d]/15 transition-colors pointer-events-none" />
 

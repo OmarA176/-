@@ -5,7 +5,7 @@ import { RESTAURANT_INFO } from '../data/restaurantData';
 
 export const LocationAndContact: React.FC = () => {
   return (
-    <section id="location" className="py-14 lg:py-16 bg-[#121724] border-t border-[#caa85d]/20 relative overflow-hidden">
+    <section id="location" className="py-14 lg:py-16 bg-[#141928] border-t border-[#caa85d]/20 relative overflow-hidden">
       {/* Subtle Ambient Glows for Frosted Glass Depth */}
       <div className="absolute -top-24 left-1/3 w-96 h-96 bg-[#caa85d]/14 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute -bottom-24 right-1/3 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
@@ -40,7 +40,7 @@ export const LocationAndContact: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.45 }}
               whileHover={{ y: -3 }}
-              className="bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl rounded-2xl border border-white/15 hover:border-[#caa85d]/45 p-5 transition-colors shadow-[0_12px_32px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.12)] transform-gpu"
+              className="bg-[#0b101b]/65 hover:bg-[#111726]/75 backdrop-blur-xl rounded-2xl border border-white/15 hover:border-[#caa85d]/45 p-5 transition-colors shadow-[0_12px_32px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)] transform-gpu"
             >
               <div className="flex items-start gap-3.5">
                 <div className="p-3 rounded-xl bg-[#caa85d]/15 border border-[#caa85d]/30 text-[#dfc57d] shrink-0">
@@ -69,7 +69,7 @@ export const LocationAndContact: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.45, delay: 0.08 }}
               whileHover={{ y: -3 }}
-              className="bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl rounded-2xl border border-white/15 hover:border-emerald-400/45 p-5 transition-colors shadow-[0_12px_32px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.12)] transform-gpu"
+              className="bg-[#0b101b]/65 hover:bg-[#111726]/75 backdrop-blur-xl rounded-2xl border border-white/15 hover:border-emerald-400/45 p-5 transition-colors shadow-[0_12px_32px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)] transform-gpu"
             >
               <div className="flex items-start gap-3.5">
                 <div className="p-3 rounded-xl bg-emerald-500/20 border border-emerald-400/30 text-emerald-400 shrink-0">
@@ -102,7 +102,7 @@ export const LocationAndContact: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.45, delay: 0.16 }}
               whileHover={{ y: -3 }}
-              className="bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl rounded-2xl border border-white/15 hover:border-blue-400/45 p-5 transition-colors shadow-[0_12px_32px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.12)] transform-gpu"
+              className="bg-[#0b101b]/65 hover:bg-[#111726]/75 backdrop-blur-xl rounded-2xl border border-white/15 hover:border-blue-400/45 p-5 transition-colors shadow-[0_12px_32px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)] transform-gpu"
             >
               <div className="flex items-start gap-3.5">
                 <div className="p-3 rounded-xl bg-blue-500/20 border border-blue-400/30 text-blue-400 shrink-0">
@@ -126,7 +126,7 @@ export const LocationAndContact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-7 bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/15 p-5 sm:p-6 flex flex-col justify-between shadow-[0_12px_36px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.12)] transform-gpu"
+            className="lg:col-span-7 bg-[#0b101b]/65 backdrop-blur-xl rounded-2xl border border-white/15 p-5 sm:p-6 flex flex-col justify-between shadow-[0_12px_36px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)] transform-gpu"
           >
             <div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
