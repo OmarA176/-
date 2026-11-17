@@ -8,6 +8,7 @@ export interface MenuItem {
   name: string;
   nameEn?: string;
   category: string;
+  subCategory?: string;
   basePrice: number;
   options?: PriceOption[];
   isNew?: boolean;
@@ -51,23 +52,21 @@ export function formatEGP(amount: number): string {
   return `${amount.toFixed(amount % 1 === 0 ? 0 : 1)} ج.م`;
 }
 
+import { matchItemWithFuzzy } from './searchUtils';
+
 /**
- * Filters menu items by search query and category.
+ * Filters menu items by search query and category with Arabic normalization and typo tolerance.
  */
 export function filterMenuItems(
   items: MenuItem[],
   selectedCategory: string,
   searchQuery: string
 ): MenuItem[] {
-  const query = searchQuery.trim().toLowerCase();
+  const query = searchQuery.trim();
   return items.filter((item) => {
     const matchesCategory =
       selectedCategory === 'all' || item.category === selectedCategory;
-    const matchesSearch =
-      !query ||
-      item.name.toLowerCase().includes(query) ||
-      (item.description && item.description.toLowerCase().includes(query)) ||
-      (item.nameEn && item.nameEn.toLowerCase().includes(query));
+    const matchesSearch = !query || matchItemWithFuzzy(query, item);
 
     return matchesCategory && matchesSearch;
   });

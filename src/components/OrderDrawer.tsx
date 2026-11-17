@@ -88,7 +88,7 @@ export const OrderDrawer: React.FC<OrderDrawerProps> = ({
               </p>
               <button
                 onClick={onClose}
-                className="px-5 py-2.5 bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 font-black rounded-xl text-sm transition-transform hover:scale-105 cursor-pointer"
+                className="px-5 py-2.5 bg-gradient-to-r from-[#caa85d] via-[#bfa054] to-[#a8863b] text-[#12151d] font-black rounded-xl text-sm transition-transform hover:scale-105 cursor-pointer shadow-md"
               >
                 تصفح القائمة الآن
               </button>
@@ -225,12 +225,12 @@ export const OrderDrawer: React.FC<OrderDrawerProps> = ({
           <div className="p-5 border-t border-gray-700/70 bg-[#191e2b] space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-sm font-bold text-gray-200">إجمالي الحساب:</span>
-              <span className="text-2xl font-black text-amber-300 font-mono drop-shadow">
+              <span className="text-2xl font-black text-[#dfc57d] font-mono drop-shadow">
                 {formatEGP(total)}
               </span>
             </div>
 
-            {/* Direct WhatsApp Action (Brightened) */}
+            {/* Direct WhatsApp Action */}
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -241,12 +241,12 @@ export const OrderDrawer: React.FC<OrderDrawerProps> = ({
               <span>إرسال الطلب عبر واتساب ({RESTAURANT_INFO.displayPhone})</span>
             </motion.button>
 
-            {/* Direct Phone Call Action (Brightened) */}
+            {/* Direct Phone Call Action (Calm satin gold) */}
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               href={`tel:${RESTAURANT_INFO.phone}`}
-              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-950 font-black py-3 px-4 rounded-xl text-sm transition-all shadow-md shadow-orange-500/20 cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#caa85d] via-[#bfa054] to-[#a8863b] hover:from-[#d5b368] hover:via-[#caa85d] hover:to-[#b39146] text-[#12151d] font-black py-3 px-4 rounded-xl text-sm transition-all shadow-md shadow-black/25 cursor-pointer"
             >
               <Phone className="w-4 h-4 fill-current" />
               <span>اتصال هاتفي مباشر للتأكيد</span>

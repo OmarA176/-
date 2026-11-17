@@ -18,15 +18,15 @@
     overflow-x: hidden;
   }
 
-  /* Vibrant lighter gold/orange text and border utilities */
+  /* Refined calm satin antique gold text and border utilities */
   .text-gold-gradient {
-    background: linear-gradient(135deg, #fef08a 0%, #facc15 35%, #fb923c 70%, #f59e0b 100%);
+    background: linear-gradient(135deg, #f5e8c4 0%, #dfc57d 40%, #caa85d 80%, #a38237 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .border-gold-gradient {
-    border-image: linear-gradient(135deg, #fde047 0%, #f59e0b 50%, #ea580c 100%) 1;
+    border-image: linear-gradient(135deg, #dfc57d 0%, #caa85d 50%, #9e7e36 100%) 1;
   }
 }
 

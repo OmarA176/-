@@ -5,6 +5,7 @@ import { MealsHighlight } from './components/MealsHighlight';
 import { MenuSection } from './components/MenuSection';
 import { AboutAndFeatures } from './components/AboutAndFeatures';
 import { LocationAndContact } from './components/LocationAndContact';
+import { GoogleReviews } from './components/GoogleReviews';
 import { Footer } from './components/Footer';
 import { MenuImageLightbox } from './components/MenuImageLightbox';
 import { OrderDrawer } from './components/OrderDrawer';
@@ -103,7 +104,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#131722] text-gray-100 flex flex-col font-sans selection:bg-amber-400 selection:text-black">
+    <div className="min-h-screen bg-[#131722] text-gray-100 flex flex-col font-sans selection:bg-amber-400 selection:text-black overflow-x-hidden">
       {/* Top Header */}
       <Header
         cartCount={totalCartCount}
@@ -125,6 +126,7 @@ export default function App() {
         />
         <AboutAndFeatures />
         <LocationAndContact />
+        <GoogleReviews />
       </main>
 
       {/* Footer */}

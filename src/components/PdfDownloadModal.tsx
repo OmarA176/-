@@ -150,7 +150,7 @@ export const PdfDownloadModal: React.FC<PdfDownloadModalProps> = ({ isOpen, onCl
           <div className="space-y-3">
             <button
               onClick={handleStartDownload}
-              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-black py-3.5 px-6 rounded-xl text-sm shadow-lg shadow-amber-500/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#caa85d] via-[#bfa054] to-[#a8863b] hover:from-[#d5b368] hover:via-[#caa85d] hover:to-[#b39146] text-[#12151d] font-black py-3.5 px-6 rounded-xl text-sm shadow-lg shadow-black/30 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
             >
               <FileDown className="w-5 h-5" />
               <span>بدء تحميل ملف الـ PDF الآن</span>

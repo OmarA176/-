@@ -5,7 +5,7 @@ import { RESTAURANT_INFO } from '../data/restaurantData';
 
 export const LocationAndContact: React.FC = () => {
   return (
-    <section id="location" className="py-20 bg-[#141822] border-t border-amber-500/20 relative">
+    <section id="location" className="py-20 bg-[#141822] border-t border-[#caa85d]/20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,12 +13,12 @@ export const LocationAndContact: React.FC = () => {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-bold mb-3">
-            <MapPin className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#caa85d]/15 border border-[#caa85d]/30 text-[#dfc57d] text-xs font-bold mb-3">
+            <MapPin className="w-3.5 h-3.5 text-[#caa85d]" />
             <span>موقعنا وخدمة العملاء</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
-            تفضلوا بزيارتنا أو <span className="text-gold-gradient">اطلبوا الآن</span>
+            تفضلوا بزيارتنا أو <span className="text-[#dfc57d]">اطلبوا الآن</span>
           </h2>
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
             يسعدنا استقبالكم في فرعنا بالسويس، أو توصيل طلباتكم ساخنة إلى باب منزلكم بأسرع وقت.
@@ -37,8 +37,8 @@ export const LocationAndContact: React.FC = () => {
               className="bg-[#1b202c] rounded-2xl border border-gray-700/80 p-6 transition-all shadow-lg"
             >
               <div className="flex items-start gap-4">
-                <div className="p-3.5 rounded-xl bg-amber-400/20 border border-amber-400/30 text-amber-300 shrink-0">
-                  <Phone className="w-6 h-6 fill-current animate-pulse" />
+                <div className="p-3.5 rounded-xl bg-[#caa85d]/15 border border-[#caa85d]/30 text-[#dfc57d] shrink-0">
+                  <Phone className="w-6 h-6 fill-current animate-pulse text-[#caa85d]" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base font-bold text-white mb-1">خط الطلبات السريعة والتوصيل</h3>
@@ -47,7 +47,7 @@ export const LocationAndContact: React.FC = () => {
                   </p>
                   <a
                     href={`tel:${RESTAURANT_INFO.phone}`}
-                    className="inline-flex items-center gap-2 text-xl font-black text-amber-300 hover:text-amber-200 font-mono tracking-wide"
+                    className="inline-flex items-center gap-2 text-xl font-black text-[#dfc57d] hover:text-[#f3e7cb] font-mono tracking-wide"
                   >
                     <span>{RESTAURANT_INFO.displayPhone}</span>
                     <span className="text-xs text-gray-400 font-sans">({RESTAURANT_INFO.phone})</span>

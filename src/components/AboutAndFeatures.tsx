@@ -68,7 +68,7 @@ export const AboutAndFeatures: React.FC = () => {
               </div>
               <div className="h-8 w-px bg-gray-600" />
               <div className="text-center">
-                <span className="text-2xl font-black text-amber-300 font-mono block">+50</span>
+                <span className="text-2xl font-black text-amber-300 font-mono block">+240</span>
                 <span className="text-xs text-gray-300">صنف وساندوتش</span>
               </div>
               <div className="h-8 w-px bg-gray-600" />

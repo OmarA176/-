@@ -14,14 +14,14 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({
   onOpenPdfModal,
 }) => {
   return (
-    <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#161a25]/95 backdrop-blur-md border-t border-amber-500/30 px-3 py-2 flex items-center justify-between gap-2 shadow-2xl">
-      {/* Call Button (Brightened orange) */}
+    <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#161a25]/95 backdrop-blur-md border-t border-[#caa85d]/30 px-3 py-2 flex items-center justify-between gap-2 shadow-2xl">
+      {/* Call Button (Calm satin gold) */}
       <a
         href={`tel:${RESTAURANT_INFO.phone}`}
-        className="flex-1 flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 font-black py-2.5 px-2 rounded-lg text-xs shadow-md shadow-orange-500/25"
+        className="flex-1 flex items-center justify-center gap-1.5 bg-gradient-to-r from-[#caa85d] via-[#bfa054] to-[#a8863b] text-[#12151d] font-black py-2.5 px-2 rounded-lg text-xs shadow-md shadow-black/30"
         aria-label="اتصل للطلب الآن"
       >
-        <Phone className="w-3.5 h-3.5 fill-current animate-pulse" />
+        <Phone className="w-3.5 h-3.5 fill-current" />
         <span>اتصل: {RESTAURANT_INFO.displayPhone}</span>
       </a>
 
