@@ -11,6 +11,7 @@ import { MenuImageLightbox } from './components/MenuImageLightbox';
 import { OrderDrawer } from './components/OrderDrawer';
 import { StickyMobileBar } from './components/StickyMobileBar';
 import { PdfDownloadModal } from './components/PdfDownloadModal';
+import { CustomCursor } from './components/CustomCursor';
 import { CartItem, MenuItem, PriceOption } from './utils/orderCalculations';
 
 export default function App() {
@@ -161,6 +162,9 @@ export default function App() {
         isOpen={isPdfModalOpen}
         onClose={() => setIsPdfModalOpen(false)}
       />
+
+      {/* Custom Ful & Taameya Cursor (Desktop) */}
+      <CustomCursor />
     </div>
   );
 }

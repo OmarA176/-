@@ -62,3 +62,14 @@
   animation: pulseGlow 4s ease-in-out infinite;
   will-change: transform, opacity;
 }
+
+@media (hover: hover) and (pointer: fine) {
+  body.has-food-cursor,
+  body.has-food-cursor * {
+    cursor: none !important;
+  }
+
+  body.has-food-cursor iframe {
+    cursor: auto !important;
+  }
+}
