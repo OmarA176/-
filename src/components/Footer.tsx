@@ -8,28 +8,30 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenPdfModal }) => {
   return (
-    <footer className="bg-[#0e1118] border-t border-amber-500/20 pt-14 pb-24 sm:pb-14 text-gray-300 text-xs">
+    <footer className="bg-[#0e1118] border-t border-amber-500/20 pt-12 pb-22 sm:pb-12 text-gray-300 text-xs sm:text-[13px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-7 mb-9">
           {/* Brand info */}
           <div className="md:col-span-1 space-y-3">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2.5">
               <img
                 src={RESTAURANT_INFO.logo}
                 alt={RESTAURANT_INFO.name}
-                className="w-10 h-10 rounded-full object-cover border border-amber-400/50"
+                loading="lazy"
+                decoding="async"
+                className="w-9 h-9 rounded-full object-cover border border-amber-400/50"
               />
               <span className="text-base font-black text-gold-gradient">
                 {RESTAURANT_INFO.name}
               </span>
             </div>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 text-xs leading-relaxed">
               المذاق المصري الأصيل بلمسة عصرية وجودة عالمية. أشهى المشويات، السندوتشات والوجبات في قلب السويس.
             </p>
             {onOpenPdfModal && (
               <button
                 onClick={onOpenPdfModal}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-orange-500/20 hover:bg-orange-500/30 text-amber-300 border border-orange-500/40 text-xs font-bold transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-500/20 hover:bg-orange-500/30 text-amber-300 border border-orange-500/40 text-xs font-bold transition-colors cursor-pointer"
               >
                 <FileDown className="w-3.5 h-3.5" />
                 <span>تحميل قائمة الطعام PDF</span>
@@ -40,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPdfModal }) => {
           {/* Quick links */}
           <div>
             <h4 className="text-sm font-bold text-white mb-3">أقسام القائمة</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-xs">
               {CATEGORIES.slice(0, 5).map((cat) => (
                 <li key={cat.id}>
                   <a href="#menu" className="hover:text-amber-300 transition-colors">
@@ -54,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPdfModal }) => {
           {/* More categories */}
           <div>
             <h4 className="text-sm font-bold text-white mb-3">أصناف مميزة</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-xs">
               {CATEGORIES.slice(5).map((cat) => (
                 <li key={cat.id}>
                   <a href="#menu" className="hover:text-amber-300 transition-colors">
@@ -66,7 +68,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPdfModal }) => {
           </div>
 
           {/* Direct Contact info */}
-          <div className="space-y-3">
+          <div className="space-y-2.5 text-xs">
             <h4 className="text-sm font-bold text-white mb-3">تواصل وطلب سريع</h4>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-amber-400 shrink-0" />
@@ -103,9 +105,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPdfModal }) => {
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-right">
+        <div className="pt-7 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-right text-xs">
           <p>© {new Date().getFullYear()} {RESTAURANT_INFO.name}. جميع الحقوق محفوظة.</p>
-          <p className="flex items-center justify-center gap-1">
+          <p className="flex items-center justify-center gap-1.5">
             <span>صُنع بحب</span>
             <Heart className="w-3.5 h-3.5 text-red-400 fill-current" />
             <span>لأجل عشاق الأكل المصري الأصيل بالسويس</span>

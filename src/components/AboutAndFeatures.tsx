@@ -37,43 +37,44 @@ export const AboutAndFeatures: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-[#12151f] relative">
+    <section id="about" className="py-14 lg:py-16 bg-[#12151f] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-12">
           <motion.div
             initial={{ opacity: 0, x: 25 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.55 }}
             className="lg:col-span-6"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-bold mb-4">
-              <Heart className="w-3.5 h-3.5 text-red-400 fill-current" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-bold mb-3.5">
+              <Heart className="w-3.5 h-3.5 text-red-400 fill-current animate-pulse" />
               <span>قصة العالمية في السويس</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-5">
               نصنع لكم المذاق المصري الأصيل{' '}
-              <span className="text-gold-gradient block mt-1">بلمسة عصرية مبتكرة</span>
+              <span className="text-gold-gradient block mt-1.5">بلمسة عصرية مبتكرة</span>
             </h2>
-            <p className="text-gray-200 text-sm sm:text-base leading-relaxed mb-4">
+            <p className="text-gray-200 text-sm leading-relaxed mb-3.5">
               انطلق مطعم وكافيه العالمية برؤية واضحة: الارتقاء بالسندوتشات المصرية والوجبات الشعبية والغربية إلى أعلى درجات الجودة والفخامة، مع الحفاظ على الروح الشعبية والأسعار العادلة.
             </p>
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+            <p className="text-gray-300 text-sm leading-relaxed mb-6">
               من حبة الفول المنتقاة بعناية، وقرص الطعمية المقرمش بالسمسم، وحتى أسياخ الكفتة والشيش طاووق المشوية على الفحم الحي؛ نحرص على تقديم تجربة طعام استثنائية تسعد كل عميل يزورنا أو يطلب من عندنا.
             </p>
 
-            <div className="flex items-center gap-6 p-4 rounded-xl bg-[#1b202c] border border-gray-700/80 shadow-md">
+            <div className="flex items-center justify-around sm:justify-start sm:gap-8 p-4 rounded-2xl bg-[#1b202c] border border-gray-700/80 shadow-md">
               <div className="text-center">
-                <span className="text-2xl font-black text-amber-300 font-mono block">24/7</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block tabular-nums">24/7</span>
                 <span className="text-xs text-gray-300">خدمة مستمرة</span>
               </div>
-              <div className="h-8 w-px bg-gray-600" />
+              <div className="h-8 w-px bg-gray-700" />
               <div className="text-center">
-                <span className="text-2xl font-black text-amber-300 font-mono block">+240</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block tabular-nums">+240</span>
                 <span className="text-xs text-gray-300">صنف وساندوتش</span>
               </div>
-              <div className="h-8 w-px bg-gray-600" />
+              <div className="h-8 w-px bg-gray-700" />
               <div className="text-center">
-                <span className="text-2xl font-black text-amber-300 font-mono block">100%</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block tabular-nums">100%</span>
                 <span className="text-xs text-gray-300">مكونات طازجة</span>
               </div>
             </div>
@@ -82,23 +83,26 @@ export const AboutAndFeatures: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.55 }}
             className="lg:col-span-6 relative"
           >
-            <div className="relative rounded-2xl overflow-hidden border border-amber-400/40 shadow-2xl group">
+            <div className="relative rounded-2xl overflow-hidden border border-amber-400/35 shadow-2xl group transform-gpu">
               <img
                 src="/assets/aistudio/480494690_1164120609058358_2999720792961422636_n_e7f92920.jpg"
                 alt="مطعم وكافيه العالمية بالسويس"
-                className="w-full h-84 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6">
                 <span className="text-amber-300 text-xs font-bold uppercase tracking-wider mb-1">
                   السويس - مصر
                 </span>
-                <h4 className="text-2xl font-bold text-white">
+                <h4 className="text-xl font-bold text-white">
                   مطعم وكافيه العالمية ٢
                 </h4>
-                <p className="text-xs text-gray-300 mt-1">
+                <p className="text-xs sm:text-sm text-gray-300 mt-1">
                   مكانكم المفضل للقاء الأحبة وتناول أشهى الوجبات والمشروبات
                 </p>
               </div>
@@ -106,25 +110,25 @@ export const AboutAndFeatures: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Feature Cards with hover animations */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Feature Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((feat, index) => {
             const Icon = feat.icon;
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: index * 0.06 }}
-                whileHover={{ y: -4, borderColor: 'rgba(251, 191, 36, 0.4)' }}
-                className="bg-[#1b202c] rounded-2xl border border-gray-700/80 p-6 transition-colors shadow-lg shadow-black/20"
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                whileHover={{ y: -4 }}
+                className="bg-[#1b202c] rounded-2xl border border-gray-700/80 hover:border-amber-400/45 p-5 transition-colors shadow-lg shadow-black/20 transform-gpu"
               >
-                <div className="w-12 h-12 rounded-xl bg-amber-400/20 border border-amber-400/30 text-amber-300 flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6" />
+                <div className="w-10 h-10 rounded-xl bg-amber-400/15 border border-amber-400/30 text-amber-300 flex items-center justify-center mb-3.5">
+                  <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-base font-bold text-white mb-2">{feat.title}</h3>
-                <p className="text-xs text-gray-300 leading-relaxed">{feat.description}</p>
+                <h3 className="text-base font-bold text-white mb-1.5">{feat.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">{feat.description}</p>
               </motion.div>
             );
           })}

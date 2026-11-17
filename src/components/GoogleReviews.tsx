@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Star, MapPin, ExternalLink, ThumbsUp, ShieldCheck, MessageSquare, Quote } from 'lucide-react';
-import { GOOGLE_REVIEWS, GOOGLE_REVIEWS_STATS, GoogleReview } from '../data/reviewsData';
+import { Star, ExternalLink, ThumbsUp, ShieldCheck, MessageSquare, Quote } from 'lucide-react';
+import { GOOGLE_REVIEWS, GOOGLE_REVIEWS_STATS } from '../data/reviewsData';
 
 export const GoogleReviews: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'delivery' | 'food'>('all');
@@ -17,47 +17,47 @@ export const GoogleReviews: React.FC = () => {
   });
 
   return (
-    <section id="reviews" className="py-20 bg-[#121622] border-t border-[#caa85d]/20 relative overflow-hidden">
-      {/* Subtle ambient lighting */}
-      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-[#caa85d]/5 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 left-1/4 w-80 h-80 bg-amber-600/5 rounded-full blur-[120px] pointer-events-none" />
+    <section id="reviews" className="py-14 lg:py-16 bg-[#121622] border-t border-[#caa85d]/20 relative overflow-hidden">
+      {/* Subtle Ambient Gold Glows */}
+      <div className="hidden sm:block absolute top-1/4 right-0 w-80 h-80 bg-[#caa85d]/5 rounded-full blur-[100px] pointer-events-none transform-gpu" />
+      <div className="hidden sm:block absolute bottom-1/4 left-0 w-72 h-72 bg-amber-600/5 rounded-full blur-[90px] pointer-events-none transform-gpu" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-12"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-2xl mx-auto mb-10"
         >
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#caa85d]/15 border border-[#caa85d]/30 text-[#dfc57d] text-xs font-bold mb-3 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#caa85d]/15 border border-[#caa85d]/30 text-[#dfc57d] text-xs font-bold mb-2.5">
             <Star className="w-3.5 h-3.5 fill-[#caa85d] text-[#caa85d]" />
             <span>آراء وتجارب العملاء الموثقة</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-3">
             ماذا يقول عملاؤنا على <span className="text-[#dfc57d]">خرائط Google</span>
           </h2>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
             شهادات حقيقية من أهل السويس وزوارنا الكرام، نسعد دائماً بثقتكم ونسعى لتقديم أعلى مستوى من الجودة والخدمة.
           </p>
         </motion.div>
 
         {/* Google Maps Aggregate Rating Score Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-[#181d2a] border border-[#caa85d]/30 rounded-2xl p-6 sm:p-8 mb-12 shadow-xl shadow-black/40 flex flex-col md:flex-row items-center justify-between gap-6"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="bg-[#181d2a] border border-[#caa85d]/30 rounded-2xl p-5 sm:p-7 mb-9 shadow-xl shadow-black/30 flex flex-col md:flex-row items-center justify-between gap-6 transform-gpu"
         >
-          {/* Rating Summary */}
-          <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-right">
-            <div className="flex flex-col items-center justify-center bg-[#11151f] border border-gray-800 rounded-2xl p-4 w-32 h-32 shrink-0 shadow-inner">
-              <span className="text-4xl sm:text-5xl font-black text-white font-mono leading-none">
+          <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-right">
+            <div className="flex flex-col items-center justify-center bg-[#11151f] border border-gray-800 rounded-2xl p-3.5 w-28 h-28 shrink-0 shadow-inner">
+              <span className="text-3xl sm:text-4xl font-black text-white font-mono leading-none tabular-nums">
                 {GOOGLE_REVIEWS_STATS.averageRating}
               </span>
-              <div className="flex items-center gap-1 my-1.5 text-[#caa85d]">
+              <div className="flex items-center gap-0.5 my-1.5 text-[#caa85d]">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
@@ -71,8 +71,7 @@ export const GoogleReviews: React.FC = () => {
             </div>
 
             <div>
-              <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
-                {/* Google Icon SVG */}
+              <div className="flex items-center justify-center sm:justify-start gap-2 mb-1.5">
                 <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
                   <path
                     fill="#4285F4"
@@ -91,13 +90,13 @@ export const GoogleReviews: React.FC = () => {
                     d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
                   />
                 </svg>
-                <h3 className="text-xl font-bold text-white">تقييمات Google الرسمية</h3>
+                <h3 className="text-lg font-bold text-white">تقييمات Google الرسمية</h3>
               </div>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed mb-2">
                 أكثر من <strong className="font-bold text-[#dfc57d]">440 تقييم معتمد</strong> لفرع مطعم وكافيه العالمية ٢ (شارع عثمان بن عفان، فيصل، السويس).
               </p>
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 text-xs text-gray-400">
-                <span className="flex items-center gap-1 text-emerald-400 font-semibold">
+                <span className="flex items-center gap-1.5 text-emerald-400 font-semibold">
                   <ShieldCheck className="w-4 h-4" />
                   تقييمات موثقة من زوار حقيقيين
                 </span>
@@ -107,35 +106,34 @@ export const GoogleReviews: React.FC = () => {
             </div>
           </div>
 
-          {/* Action to open on Google Maps */}
           <motion.a
             whileHover={{ scale: 1.04, y: -2 }}
             whileTap={{ scale: 0.97 }}
             href={GOOGLE_REVIEWS_STATS.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#caa85d] via-[#bfa054] to-[#a8863b] hover:from-[#d5b368] hover:via-[#caa85d] hover:to-[#b39146] text-[#12151d] font-black px-6 py-3.5 rounded-xl text-sm shadow-lg shadow-black/30 transition-all shrink-0 cursor-pointer"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#caa85d] via-[#bfa054] to-[#a8863b] hover:from-[#d5b368] hover:via-[#caa85d] hover:to-[#b39146] text-[#12151d] font-black px-5 py-3 rounded-xl text-xs sm:text-sm shadow-lg transition-colors shrink-0 cursor-pointer"
           >
             <span>اكتب تقييمك أو اقرأ المزيد على خرائط Google</span>
             <ExternalLink className="w-4 h-4" />
           </motion.a>
         </motion.div>
 
-        {/* Filter Pills */}
-        <div className="flex items-center justify-center gap-2 mb-8">
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-7">
           <button
             onClick={() => setActiveFilter('all')}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+            className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-colors cursor-pointer ${
               activeFilter === 'all'
                 ? 'bg-[#caa85d] text-[#12151d] font-black shadow-md'
                 : 'bg-[#1b202c] text-gray-300 hover:text-white hover:bg-[#222938] border border-gray-700/60'
             }`}
           >
-            جميع التقيمات المختارة ({GOOGLE_REVIEWS.length})
+            جميع التقييمات المختارة ({GOOGLE_REVIEWS.length})
           </button>
           <button
             onClick={() => setActiveFilter('delivery')}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+            className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-colors cursor-pointer ${
               activeFilter === 'delivery'
                 ? 'bg-[#caa85d] text-[#12151d] font-black shadow-md'
                 : 'bg-[#1b202c] text-gray-300 hover:text-white hover:bg-[#222938] border border-gray-700/60'
@@ -145,7 +143,7 @@ export const GoogleReviews: React.FC = () => {
           </button>
           <button
             onClick={() => setActiveFilter('food')}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+            className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-colors cursor-pointer ${
               activeFilter === 'food'
                 ? 'bg-[#caa85d] text-[#12151d] font-black shadow-md'
                 : 'bg-[#1b202c] text-gray-300 hover:text-white hover:bg-[#222938] border border-gray-700/60'
@@ -156,27 +154,26 @@ export const GoogleReviews: React.FC = () => {
         </div>
 
         {/* Reviews Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredReviews.map((review, idx) => (
             <motion.div
               key={review.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="bg-[#1b202c] rounded-2xl border border-gray-700/80 p-6 flex flex-col justify-between shadow-lg shadow-black/20 hover:border-[#caa85d]/40 transition-colors group relative"
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.4, delay: idx * 0.06 }}
+              whileHover={{ y: -4 }}
+              className="bg-[#1b202c] rounded-2xl border border-gray-700/80 hover:border-[#caa85d]/45 p-5 flex flex-col justify-between shadow-lg shadow-black/20 transition-colors group relative transform-gpu"
             >
-              {/* Quote Watermark Icon */}
-              <Quote className="absolute top-5 left-5 w-8 h-8 text-gray-700/30 group-hover:text-[#caa85d]/15 transition-colors pointer-events-none" />
+              <Quote className="absolute top-4 left-4 w-7 h-7 text-gray-700/30 group-hover:text-[#caa85d]/15 transition-colors pointer-events-none" />
 
               <div>
-                {/* Author Info Row */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-full bg-gradient-to-tr from-[#caa85d] to-[#edd69b] text-[#12151d] font-black flex items-center justify-center text-base shadow-md shrink-0">
+                <div className="flex items-center gap-3 mb-3.5">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#caa85d] to-[#edd69b] text-[#12151d] font-black flex items-center justify-center text-base shadow-sm shrink-0">
                     {review.authorName.charAt(0)}
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-white leading-snug">
+                    <h4 className="text-sm sm:text-base font-bold text-white leading-snug">
                       {review.authorName}
                     </h4>
                     <div className="flex items-center gap-2 text-xs text-gray-400">
@@ -192,23 +189,20 @@ export const GoogleReviews: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Stars Row */}
-                <div className="flex items-center gap-1 mb-3 text-[#caa85d]">
+                <div className="flex items-center gap-0.5 mb-2.5 text-[#caa85d]">
                   {[...Array(review.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-current text-[#caa85d]" />
                   ))}
                 </div>
 
-                {/* Review Text */}
                 <p className="text-sm text-gray-200 leading-relaxed mb-4 font-normal">
                   "{review.text}"
                 </p>
               </div>
 
-              {/* Bottom Tag / Highlighted Dish */}
               <div className="pt-3 border-t border-gray-700/60 flex items-center justify-between text-xs text-gray-400">
                 {review.highlightDish && (
-                  <span className="inline-flex items-center gap-1 bg-[#caa85d]/10 text-[#dfc57d] border border-[#caa85d]/20 px-2.5 py-1 rounded-md text-[11px] font-semibold">
+                  <span className="inline-flex items-center gap-1.5 bg-[#caa85d]/10 text-[#dfc57d] border border-[#caa85d]/20 px-2.5 py-0.5 rounded-md text-[11px] font-semibold">
                     <MessageSquare className="w-3 h-3 text-[#caa85d]" />
                     <span>{review.highlightDish}</span>
                   </span>

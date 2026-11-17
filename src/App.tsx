@@ -104,7 +104,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#131722] text-gray-100 flex flex-col font-sans selection:bg-amber-400 selection:text-black overflow-x-hidden">
+    <div className="min-h-screen bg-[#131722] text-gray-100 flex flex-col font-sans selection:bg-amber-400 selection:text-black overflow-x-clip">
       {/* Top Header */}
       <Header
         cartCount={totalCartCount}

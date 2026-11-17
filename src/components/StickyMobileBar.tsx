@@ -14,14 +14,14 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({
   onOpenPdfModal,
 }) => {
   return (
-    <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#161a25]/95 backdrop-blur-md border-t border-[#caa85d]/30 px-3 py-2 flex items-center justify-between gap-2 shadow-2xl">
-      {/* Call Button (Calm satin gold) */}
+    <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#161a25]/95 backdrop-blur-md border-t border-[#caa85d]/30 px-3 py-2 flex items-center justify-between gap-2 shadow-2xl transform-gpu">
+      {/* Call Button */}
       <a
         href={`tel:${RESTAURANT_INFO.phone}`}
-        className="flex-1 flex items-center justify-center gap-1.5 bg-gradient-to-r from-[#caa85d] via-[#bfa054] to-[#a8863b] text-[#12151d] font-black py-2.5 px-2 rounded-lg text-xs shadow-md shadow-black/30"
+        className="flex-1 flex items-center justify-center gap-1.5 bg-gradient-to-r from-[#caa85d] via-[#bfa054] to-[#a8863b] text-[#12151d] font-black py-2 px-2 rounded-lg text-xs shadow-md shadow-black/30 whitespace-nowrap"
         aria-label="اتصل للطلب الآن"
       >
-        <Phone className="w-3.5 h-3.5 fill-current" />
+        <Phone className="w-3.5 h-3.5 fill-current shrink-0" />
         <span>اتصل: {RESTAURANT_INFO.displayPhone}</span>
       </a>
 
@@ -30,17 +30,17 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({
         href={RESTAURANT_INFO.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-1 flex items-center justify-center gap-1.5 bg-emerald-500 text-white font-black py-2.5 px-2 rounded-lg text-xs shadow-md shadow-emerald-950/30"
+        className="flex-1 flex items-center justify-center gap-1.5 bg-emerald-500 text-white font-black py-2 px-2 rounded-lg text-xs shadow-md shadow-emerald-950/30 whitespace-nowrap"
         aria-label="اطلب عبر واتساب"
       >
-        <MessageCircle className="w-3.5 h-3.5" />
+        <MessageCircle className="w-3.5 h-3.5 shrink-0" />
         <span>واتساب</span>
       </a>
 
       {/* PDF Button */}
       <button
         onClick={onOpenPdfModal}
-        className="flex items-center justify-center p-2.5 bg-[#202534] text-amber-300 rounded-lg border border-gray-700"
+        className="flex items-center justify-center p-2 bg-[#202534] text-amber-300 rounded-lg border border-gray-700 cursor-pointer"
         aria-label="تحميل المنيو PDF"
         title="تحميل المنيو PDF"
       >
@@ -50,7 +50,7 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({
       {/* Cart Button */}
       <button
         onClick={onOpenCart}
-        className="relative flex items-center justify-center p-2.5 bg-[#202534] text-amber-300 rounded-lg border border-gray-700"
+        className="relative flex items-center justify-center p-2 bg-[#202534] text-amber-300 rounded-lg border border-gray-700 cursor-pointer"
         aria-label="فتح سلة الطلب"
       >
         <ShoppingBag className="w-4 h-4" />

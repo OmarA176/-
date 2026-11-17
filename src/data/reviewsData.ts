@@ -12,7 +12,7 @@ export interface GoogleReview {
 }
 
 export const GOOGLE_REVIEWS_STATS = {
-  averageRating: 3.9,
+  averageRating: 4,
   totalReviews: 446,
   googleMapsUrl: 'https://maps.app.goo.gl/kJu2AxEPFDuEEAnt7',
   restaurantName: 'مطعم وكافيه العالمية ٢',
