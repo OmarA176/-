@@ -12,8 +12,12 @@ export const MealsHighlight: React.FC<MealsHighlightProps> = ({ onAddToCart }) =
   const meals = MENU_ITEMS.filter((item) => item.category === 'meals');
 
   return (
-    <section id="meals-highlight" className="py-14 lg:py-16 bg-[#141822] border-t border-b border-[#caa85d]/20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="meals-highlight" className="py-14 lg:py-16 bg-[#111520] border-t border-b border-[#caa85d]/20 relative overflow-hidden">
+      {/* Subtle Ambient Glows for Frosted Glass Depth */}
+      <div className="absolute -top-24 right-1/4 w-96 h-96 bg-[#caa85d]/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute -bottom-24 left-1/4 w-96 h-96 bg-amber-500/12 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +26,7 @@ export const MealsHighlight: React.FC<MealsHighlightProps> = ({ onAddToCart }) =
           className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-9"
         >
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#caa85d]/15 border border-[#caa85d]/35 text-[#dfc57d] text-xs font-bold mb-2.5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#caa85d]/15 border border-[#caa85d]/35 text-[#dfc57d] text-xs font-bold mb-2.5 backdrop-blur-md">
               <Flame className="w-3.5 h-3.5 fill-current animate-pulse text-[#caa85d]" />
               <span>اختيارات الزبائن المفضلة</span>
             </div>
@@ -45,7 +49,7 @@ export const MealsHighlight: React.FC<MealsHighlightProps> = ({ onAddToCart }) =
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
               whileHover={{ y: -5 }}
-              className="bg-[#1b202c] rounded-2xl border border-gray-700/80 hover:border-[#caa85d]/50 p-5 flex flex-col justify-between transition-colors group shadow-lg shadow-black/20 transform-gpu"
+              className="bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl rounded-2xl border border-white/15 hover:border-[#caa85d]/50 p-5 flex flex-col justify-between transition-colors group shadow-[0_12px_36px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.12)] transform-gpu"
             >
               <div>
                 <div className="flex items-center justify-between mb-2.5">
@@ -65,7 +69,7 @@ export const MealsHighlight: React.FC<MealsHighlightProps> = ({ onAddToCart }) =
                   {meal.description}
                 </p>
 
-                <div className="space-y-1.5 mb-5 text-xs text-gray-300 bg-[#141822] p-3 rounded-xl border border-gray-800">
+                <div className="space-y-1.5 mb-5 text-xs text-gray-200 bg-white/[0.04] backdrop-blur-md p-3 rounded-xl border border-white/10">
                   <div className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                     <span>أرز بسمتي فاخر ومتبل</span>
@@ -81,7 +85,7 @@ export const MealsHighlight: React.FC<MealsHighlightProps> = ({ onAddToCart }) =
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 pt-3.5 border-t border-gray-700/60">
+              <div className="flex items-center gap-2.5 pt-3.5 border-t border-white/10">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.96 }}
@@ -95,7 +99,7 @@ export const MealsHighlight: React.FC<MealsHighlightProps> = ({ onAddToCart }) =
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   href={`tel:${RESTAURANT_INFO.phone}`}
-                  className="p-2.5 bg-[#242b3a] hover:bg-[#2d3648] text-[#dfc57d] hover:text-white border border-gray-700 rounded-xl transition-colors cursor-pointer"
+                  className="p-2.5 bg-white/[0.06] hover:bg-white/[0.14] text-[#dfc57d] hover:text-white border border-white/15 rounded-xl transition-colors cursor-pointer backdrop-blur-md"
                   title="اتصل لطلب هذه الوجبة فوراً"
                   aria-label={`اتصل لطلب ${meal.name}`}
                 >

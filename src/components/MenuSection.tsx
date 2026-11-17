@@ -106,7 +106,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.3 }}
         whileHover={{ y: -4 }}
-        className="bg-[#1b202c] hover:bg-[#202636] rounded-2xl border border-gray-700/80 hover:border-[#caa85d]/45 p-4 sm:p-5 flex flex-col justify-between shadow-lg shadow-black/20 transition-colors group transform-gpu"
+        className="bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl rounded-2xl border border-white/15 hover:border-[#caa85d]/50 p-4 sm:p-5 flex flex-col justify-between shadow-[0_12px_32px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.12)] transition-colors group transform-gpu"
       >
         <div>
           {/* Top row with badges and original photo preview button */}
@@ -169,7 +169,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                       className={`px-2.5 py-1.5 rounded-lg text-xs font-bold flex items-center justify-between border transition-colors cursor-pointer ${
                         isOptActive
                           ? 'bg-[#caa85d]/20 border-[#caa85d] text-[#dfc57d]'
-                          : 'bg-[#151923] border-gray-700 text-gray-300 hover:bg-[#232938]'
+                          : 'bg-white/[0.04] border-white/15 text-gray-200 hover:bg-white/[0.1]'
                       }`}
                     >
                       <span className="truncate">{opt.label}</span>
@@ -185,7 +185,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
         </div>
 
         {/* Price & Add Action Row */}
-        <div className="pt-3 border-t border-gray-700/60 flex items-center justify-between gap-2.5 mt-2">
+        <div className="pt-3 border-t border-white/10 flex items-center justify-between gap-2.5 mt-2">
           <div>
             <span className="text-[11px] text-gray-400 block">السعر:</span>
             <span className="text-xl sm:text-2xl font-black text-[#dfc57d] font-mono tabular-nums">
@@ -228,8 +228,12 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
         : null;
 
   return (
-    <section id="menu" className="py-14 lg:py-16 bg-[#161a24] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="menu" className="py-14 lg:py-16 bg-[#121724] relative overflow-hidden">
+      {/* Subtle Ambient Glows for Frosted Glass Cards */}
+      <div className="absolute top-32 left-1/4 w-[28rem] h-[28rem] bg-[#caa85d]/14 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-40 right-1/4 w-[28rem] h-[28rem] bg-blue-500/12 rounded-full blur-[130px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -259,7 +263,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
               value={searchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
               placeholder="ابحث عن أي صنف: كفتة، كيري، شاورما، فول، طعمية، برجر، رول..."
-              className="w-full bg-[#1e2330] border border-gray-700/80 rounded-xl pr-11 pl-10 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#caa85d] transition-colors text-xs sm:text-sm"
+              className="w-full bg-white/[0.05] backdrop-blur-xl border border-white/15 rounded-xl pr-11 pl-10 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#caa85d] transition-colors text-xs sm:text-sm"
             />
             {searchQuery && (
               <button
@@ -293,7 +297,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
               className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-colors cursor-pointer ${
                 selectedCategory === 'all'
                   ? 'bg-gradient-to-r from-[#caa85d] via-[#bfa054] to-[#a8863b] text-[#12151d] shadow-md font-black'
-                  : 'bg-[#1e2330] text-gray-300 hover:bg-[#252b3b] hover:text-white border border-gray-700/60'
+                  : 'bg-white/[0.05] backdrop-blur-md text-gray-200 hover:bg-white/[0.1] hover:text-white border border-white/15'
               }`}
             >
               الكل ({MENU_ITEMS.length})
@@ -312,13 +316,13 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                   className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-colors cursor-pointer ${
                     isSelected
                       ? 'bg-gradient-to-r from-[#caa85d] via-[#bfa054] to-[#a8863b] text-[#12151d] shadow-md font-black'
-                      : 'bg-[#1e2330] text-gray-300 hover:bg-[#252b3b] hover:text-white border border-gray-700/60'
+                      : 'bg-white/[0.05] backdrop-blur-md text-gray-200 hover:bg-white/[0.1] hover:text-white border border-white/15'
                   }`}
                 >
                   <span>{cat.name}</span>
                   <span
                     className={`text-[11px] px-1.5 py-0.5 rounded-full ${
-                      isSelected ? 'bg-[#12151d]/20 text-[#12151d] font-bold' : 'bg-gray-700 text-gray-300'
+                      isSelected ? 'bg-[#12151d]/20 text-[#12151d] font-bold' : 'bg-white/10 text-gray-200'
                     }`}
                   >
                     {count}
@@ -347,7 +351,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                     className={`px-3 py-1 rounded-lg text-xs font-bold transition-colors cursor-pointer border ${
                       isSubSelected
                         ? 'bg-[#caa85d]/20 border-[#caa85d] text-[#dfc57d]'
-                        : 'bg-[#1a1f2c] border-gray-700/70 text-gray-300 hover:text-white hover:border-gray-600'
+                        : 'bg-white/[0.05] backdrop-blur-md border-white/15 text-gray-200 hover:text-white hover:border-white/30'
                     }`}
                   >
                     {sub.label} ({subCount})
@@ -360,7 +364,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
 
         {/* Results Counter & Search Indicator */}
         {(searchQuery || selectedCategory !== 'all') && (
-          <div className="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm text-gray-400 mb-6 bg-[#1a1f2c] px-4 py-2.5 rounded-xl border border-gray-800">
+          <div className="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm text-gray-300 mb-6 bg-white/[0.05] backdrop-blur-xl px-4 py-2.5 rounded-xl border border-white/15">
             <span>
               عرض <strong className="text-[#dfc57d] font-bold">{filteredItems.length}</strong> صنف
               {searchQuery && ` لنتائج البحث عن: "${searchQuery}"`}
@@ -382,7 +386,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
 
         {/* Items Display */}
         {filteredItems.length === 0 ? (
-          <div className="text-center py-14 bg-[#1a1f2c] rounded-2xl border border-gray-800 p-6 shadow-xl">
+          <div className="text-center py-14 bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/15 p-6 shadow-xl">
             <Utensils className="w-10 h-10 text-gray-500 mx-auto mb-3" />
             <h3 className="text-lg font-bold text-gray-200 mb-1.5">
               {globalSearchMatchesCount > 0
@@ -446,7 +450,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                     </div>
                     <button
                       onClick={() => handleCategorySelect(category.id)}
-                      className="self-start sm:self-auto text-xs font-bold text-[#dfc57d] hover:text-white bg-[#1e2330] hover:bg-[#252b3b] border border-gray-700/70 px-3.5 py-1.5 rounded-xl transition-colors cursor-pointer"
+                      className="self-start sm:self-auto text-xs font-bold text-[#dfc57d] hover:text-white bg-white/[0.05] hover:bg-white/[0.1] backdrop-blur-md border border-white/15 px-3.5 py-1.5 rounded-xl transition-colors cursor-pointer"
                     >
                       عرض هذا القسم كاملاً ({totalInCategory})
                     </button>
@@ -462,7 +466,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
             {/* Show More / Show Less Pagination Bar */}
             <div
               data-testid="menu-all-pagination"
-              className="pt-5 flex flex-col items-center justify-center gap-3 border-t border-gray-800/80"
+              className="pt-5 flex flex-col items-center justify-center gap-3 border-t border-white/10"
             >
               <p className="text-xs sm:text-sm text-gray-400">
                 يتم عرض <strong className="text-[#dfc57d]">{paginatedAll.shownCount}</strong> من إجمالي{' '}
@@ -487,7 +491,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.96 }}
                     onClick={() => setAllVisibleLimit(INITIAL_ALL_MENU_LIMIT)}
-                    className="inline-flex items-center gap-1.5 bg-[#1e2330] hover:bg-[#252b3b] border border-gray-700 text-gray-200 font-bold px-5 py-3 rounded-xl text-xs sm:text-sm transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 bg-white/[0.05] hover:bg-white/[0.1] backdrop-blur-md border border-white/15 text-gray-200 font-bold px-5 py-3 rounded-xl text-xs sm:text-sm transition-colors cursor-pointer"
                   >
                     <ChevronUp className="w-4 h-4" />
                     <span>عرض أقل</span>

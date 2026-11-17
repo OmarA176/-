@@ -125,8 +125,8 @@ export default function App() {
           onOpenPdfModal={() => setIsPdfModalOpen(true)}
         />
         <AboutAndFeatures />
-        <LocationAndContact />
         <GoogleReviews />
+        <LocationAndContact />
       </main>
 
       {/* Footer */}
